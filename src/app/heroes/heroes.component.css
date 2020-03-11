@@ -1,0 +1,52 @@
+.example-card {max-width: 15rem; padding: 2.1rem;}
+.example-header-image0 {background-image: url('../../assets/dog0.jpg');background-size: cover;}
+.example-header-image1 {background-image: url('../../assets/dog1.jpg');background-size: cover;}
+.example-header-image2 {background-image: url('../../assets/dog2.jpg');background-size: cover;}
+.example-header-image3 {background-image: url('../../assets/dog3.jpg');background-size: cover;}
+.example-header-image4 {background-image: url('../../assets/dog4.jpg');background-size: cover;}
+.example-header-image5 {background-image: url('../../assets/dog5.jpg');background-size: cover;}
+.example-header-image6 {background-image: url('../../assets/dog6.jpg');background-size: cover;}
+.example-header-image7 {background-image: url('../../assets/dog7.jpg');background-size: cover;}
+.example-header-image8 {background-image: url('../../assets/dog8.jpg');background-size: cover;}
+.example-header-image9 {background-image: url('../../assets/dog9.jpg');background-size: cover;}
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction
+     and if we allow the items to wrap
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+.selected {
+  background-color: pink;
+  color: #000000;
+}
+.selected:hover {
+  background-color: palegreen;
+  color: black;
+}
