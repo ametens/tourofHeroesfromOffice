@@ -1,5 +1,45 @@
-<div *ngIf="hero" style="border: 1px dotted black;">
-  <h2>{{hero.name | uppercase}} details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div><label>name: <input [(ngModel)]="hero.name" placeholder="name"/></label></div>
-</div>
+<!--<mat-card *ngIf="hero" style="margin-top: 1.5em;">-->
+
+<!--  <h3>{{hero.name | uppercase}} details</h3>-->
+
+
+<!--  <img src="{{ '../../assets/dog' + hero.id + '.jpg'}}"-->
+<!--       alt="{{ hero.name + ' is a star! Vote for him.'}}"-->
+<!--       style="max-width: 200px">-->
+
+
+<!--  <div>-->
+<!--    <span>id: </span>-->
+<!--    {{hero.id}}<br>-->
+
+<!--    <label>name:-->
+
+<!--      <input [(ngModel)]="hero.name" placeholder="name"/>-->
+
+<!--    </label>-->
+<!--  </div>-->
+
+<!--</mat-card>-->
+
+
+
+
+<mat-card *ngIf="hero" class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar style="background-image: url({{'../../assets/dog' + hero.id + '.jpg'}});
+  background-size: cover;"></div>
+    <mat-card-title>{{ hero.name }}</mat-card-title>
+    <mat-card-subtitle><label>Name: <input [(ngModel)]="hero.name" placeholder="Name of the hero" /></label></mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="../../assets/dog{{hero.id}}.jpg" alt="Photo of {{ hero.name}}">
+  <mat-card-content>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis odio velit, a mollis diam egestas ut. Etiam a mollis elit, id gravida risus. Fusce id aliquam augue, eu ultrices ante. Nulla facilisi.</p>
+  </mat-card-content>
+  <mat-card-actions>
+<!--    <button mat-button>LIKE</button>-->
+<!--    <button mat-button>SHARE</button>-->
+    <button class="mdc-button mdc-button--raised" (click)="goBack()">Back</button>
+  </mat-card-actions>
+</mat-card>
+
+

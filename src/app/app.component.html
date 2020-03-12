@@ -1,3 +1,17 @@
-<h1 style="padding: 2rem">{{ title }}</h1>
-<app-heroes></app-heroes>
-<app-messages></app-messages>
+<mat-card id="main">
+  <h1>{{ title }}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>&nbsp;
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+
+
+<div id="left_col" style="margin-top: 3em;">
+  <router-outlet></router-outlet>
+</div>
+<div id="right_col" style="margin-top: 3em;">
+  <app-messages></app-messages>
+</div>
+</mat-card>
+
+

@@ -1,19 +1,13 @@
-<div style="padding: 1.2rem;"
-     *ngFor="let hero of heroes"
-     (click)="onSelect(hero)">
+  <mat-card>
+    <mat-card-title>List of heroes</mat-card-title>
+    <mat-card-subtitle>Click on the hero to get details and edit</mat-card-subtitle>
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+          <span style="display:inline;font-size: small">id: {{ hero.id }} </span>
+          {{ hero.name | uppercase }} details
+        </a>
+      </li>
+    </ul>
+  </mat-card>
 
-  <section style="text-align:center;margin:0; border: 1px dotted black;"
-           [class.selected]="hero === selectedHero">
-
-    <h2>
-      <span style="display:block;font-size: small">id: {{ hero.id }}</span>
-      {{ hero.name | uppercase }} details
-    </h2>
-    <button mat-button >LIKE</button>
-    <button mat-button>SHARE</button>
-
-  </section>
-
-</div>
-
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>

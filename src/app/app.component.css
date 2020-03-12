@@ -10,7 +10,7 @@ h2, h3 {
   font-weight: lighter;
 }
 body {
-  margin: 2em;
+  /*margin: 2em;*/
 }
 body, input[type="text"], button {
   color: #333;
@@ -19,4 +19,40 @@ body, input[type="text"], button {
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;
+}
+#left_col{
+  float:left;
+  width: 65.5%;
+  /*margin-left: 2.5%;*/
+  text-align: justify;
+}
+#right_col{
+  float:right;
+  width: 31.5%;
+  /*margin-left: 2.5%;*/
+  text-align: justify;
+}
+#main {
+  margin: 2em 1.5em;
+  background-color: #33669c3b;
+}
+
+/* AppComponent's private CSS styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #334953;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+nav a.active {
+  color: #039be5;
 }

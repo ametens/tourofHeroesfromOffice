@@ -1,0 +1,7 @@
+/* MessagesComponent's private CSS styles */
+h2 {}
+body, input[text], button {}
+button.clear {}
+button:hover {}
+button:disabled {}
+button.clear {}
