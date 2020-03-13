@@ -1,6 +1,9 @@
 .example-card {
   max-width: 400px;
 }
+.example-card-actions {
+  display: flex;
+}
 label {
   display: inline-block;
   width: 3em;

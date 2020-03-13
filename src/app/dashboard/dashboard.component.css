@@ -5,7 +5,7 @@
   padding-bottom: 20px;
 }
 [class*='col-']:last-of-type {
-  padding-right: 0;
+  /*padding-right: 0;*/
 }
 a {
   text-decoration: none;
@@ -45,14 +45,14 @@ h4 {
 }
 .topHeroCard {
   padding:.2em;
-  margin: 0 .7rem;
+  margin: 1.1rem .7rem;
   max-width: 10rem;
 }
 .grid-pad {
   padding: 10px 0;
 }
 .grid-pad > [class*='col-']:last-of-type {
-  padding-right: 20px;
+  padding-right: 3px;
 }
 @media (max-width: 600px) {
   .module {

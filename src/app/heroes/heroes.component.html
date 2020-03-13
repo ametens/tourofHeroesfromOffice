@@ -1,12 +1,27 @@
   <mat-card>
     <mat-card-title>List of heroes</mat-card-title>
     <mat-card-subtitle>Click on the hero to get details and edit</mat-card-subtitle>
+    <div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Hero name</mat-label>
+        <input placeholder="Ex. Pizza" matInput #heroName />
+      </mat-form-field>
+
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button mat-button (click)="add(heroName.value); heroName.value=''">
+        Add new Hero!
+      </button>
+    </div>
     <ul class="heroes">
-      <li *ngFor="let hero of heroes">
+      <li *ngFor="let hero of heroes" style="display: flex;justify-content: space-between">
         <a routerLink="/detail/{{hero.id}}">
-          <span style="display:inline;font-size: small">id: {{ hero.id }} </span>
+<!--          <span style="display:inline;font-size: small">id: {{ hero.id }} </span>-->
           {{ hero.name | uppercase }} details
-        </a>
+        </a>&nbsp;&nbsp;
+        <a mat-mini-fab
+           title="{{'Delete ' +  hero.name + '?' | uppercase }}"
+           (click)="delete(hero)"
+           style="max-width: 15px;max-height: 15px;font-size:small;cursor:pointer;color:dodgerblue;border: 1px ridge">&nbsp;&nbsp;&nbsp;&nbsp;</a>
       </li>
     </ul>
   </mat-card>

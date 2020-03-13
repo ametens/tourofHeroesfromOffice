@@ -1,8 +1,24 @@
 <h3>Top Heroes</h3>
+
 <div class="grid grid-pad">
-  <mat-card routerLink="/detail/{{hero.id}}" *ngFor="let hero of heroes" class="col-1-4 topHeroCard">
-    <div class="module hero" style="background-image: url({{'../assets/dog' + hero.id + '.jpg'}}); background-size: cover;">
+
+  <mat-card routerLink="/detail/{{hero.id}}"
+            *ngFor="let hero of heroes"
+            class="col-1-4 topHeroCard">
+
+    <div class="module hero"
+         style="background-image: url({{'../assets/dog' + hero.id + '.jpg'}}); background-size: cover;">
+
       <h4 style="padding-top: 6.9em">{{hero.name}}</h4>
+
     </div>
   </mat-card>
 </div>
+<div class="grid grid-pad" style="margin-top: 13em">
+<mat-card>
+  <mat-card-title>Search for a Hero</mat-card-title>
+  <mat-card-subtitle>Begin by typing a few letters of the name...</mat-card-subtitle>
+  <mat-card-content>
+    <app-hero-search></app-hero-search>
+  </mat-card-content>
+</mat-card></div>
